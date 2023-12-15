@@ -33,7 +33,7 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-create table aquario (
+create table estufa (
 /* em nossa regra de negócio, um aquario tem apenas um sensor */
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	descricao VARCHAR(300),
@@ -46,17 +46,14 @@ create table aquario (
 create table medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
 	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
 	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+	fk_estufa INT,
+	FOREIGN KEY (fk_estufa) REFERENCES estufa(id)
 );
 
-insert into empresa (razao_social, cnpj) values ('Empresa 1', '00000000000000');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
+insert into empresa (razao_social, cnpj) values ('Vida botânica', '00000000000000');
+insert into estufa (descricao, fk_estufa) values ('Estufa de Girassol', 1);
 
 /*
 comando para sql server - banco remoto - ambiente de produção
