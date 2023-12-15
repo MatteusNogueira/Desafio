@@ -163,30 +163,34 @@ font-size: 50px;
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('../assets/imgs/Flavor-Laboratories-Geranium-Green-House.jpg');
   background-size: cover;
+  background-position-y: center ;
 }
 
 .login .container {
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   height: 100%;
 }
 
 .card {
   width: 30%;
-  background-color: #e5e5e5;
+  background-color: white;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  text-align: center;
   flex-direction: column;
-  color: palevioletred;
+  color: black;
   row-gap: 20px;
+  padding: 15px;
 }
 
 .card-cadastro {
   height: 80%;
+  
 }
 
 .card-login {
@@ -212,14 +216,14 @@ font-size: 50px;
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
+  border: 2px solid #cd2c1e;
   height: 30px;
   text-align: center;
   border-radius: 10px;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
+  border: 2px solid #cd2c1e;
   background-color: white;
   color: gray;
   height: 36px;
@@ -241,10 +245,11 @@ font-size: 50px;
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #e6005a;
+  background-color: #cd2c1e;
   width: 120px;
   height: 30px;
   align-self: center;
+  margin-top: 5px;
 }
 
 .loading-div {
