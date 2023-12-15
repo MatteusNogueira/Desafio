@@ -21,7 +21,18 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  border-bottom: 10px solid #43a838;
+  background-color: azure;
+}
+
+#backHeader{
+  position: absolute;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  background-image: url(../assets/imgs/backHeader.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header .container {
@@ -60,24 +71,62 @@ body {
 
 .banner {
   height: var(--tamanho-banner);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('../assets/imgs/background.jpg');
   background-size: cover;
+
 }
 
 .banner .container {
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: start;
   height: 100%;
+}
+
+@keyframes descerTitulo {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes aparecerCad {
+  0% {
+    opacity: 0%;
+    display: flex;
+  }
+  100% {
+    opacity: 1;
+    display: flex;
+  }
+}
+
+
+.Titulo{
+  animation: descerTitulo 1s ;
 }
 
 .banner .container p {
   font-size: 36px;
-  color: white;
+  color: BLACK;
   width: 280px;
-}
-
-.banner .container span {
-  font-weight: 800;
+  animation: aparecerCad 1s;
+  /* From https://css.glass */
+background: rgba(218, 39, 32, 0.4);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(218, 39, 32, 0.3);
+backdrop-filter: blur(6.9px);
+-webkit-backdrop-filter: blur(6.9px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+width: fit-content;
+padding: 0 20px;
+height: 150px;
+font-size: 50px;
 }
 
 .social {
